@@ -1,0 +1,16 @@
+$vm_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
+@function rem($px) {
+     @return ($px / $vm_fontsize ) * 1rem;
+}
+.app_list {
+  .app_item {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    .item_no{
+      font-size: rem(14);
+      color: #999;
+    }
+  }
+}
