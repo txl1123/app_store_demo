@@ -18,4 +18,11 @@ html {
 body {
     max-width: 540px;
     min-width: 320px;
+    margin: auto;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}

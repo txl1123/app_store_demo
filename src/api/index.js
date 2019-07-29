@@ -7,3 +7,10 @@ export function getAppList(params) {
     method: 'get'
   })
 }
+export function getRecomendList(params) {
+  return request({
+    url: 'recomendData',
+    params,
+    method: 'get'
+  })
+}

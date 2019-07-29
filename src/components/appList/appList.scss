@@ -8,9 +8,78 @@ $vm_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
     flex: 1;
     justify-content: space-between;
     align-items: center;
-    .item_no{
-      font-size: rem(14);
-      color: #999;
+    padding: rem(10) rem(17);
+    position: relative;
+    overflow: hidden;
+    &:after{
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      position: absolute;
+      bottom: 0;
+      border-bottom: rem(1) solid #dedede;
     }
+    &:nth-child(odd) {
+      .item_img{
+        border-radius: rem(18);
+      }
+    }
+    &:nth-child(even) {
+      .item_img{
+        border-radius: 50%;
+      }
+    }
+    .item_no{
+      font-size: rem(22);
+      color: #888;
+    }
+    .item_img {
+      width: rem(70);
+      height: rem(70);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden;
+      background: #ddd;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity:0;
+        animation-name: fadeIn;
+        animation-duration: .6s;
+        animation-fill-mode: forwards;
+      }
+    }
+    .item_info {
+      width: 65%;
+      font-size: rem(15);
+      .item_name {
+        font-size: rem(15);
+        color: #333;
+      }
+      .item_category {
+        color: #666;
+        font-size: rem(13);
+        padding: rem(8) 0;
+      }
+      .item_price {
+        color: #007AFF;
+        font-size: rem(14);
+        border-radius: 50px;
+        background: #f0f0f7;
+        padding: rem(2) rem(14);
+        text-align: center;
+        display: inline-block;
+        font-size: rem(12);
+      }
+    }
+  }
+}
+@keyframes fadeIn{
+  from{
+    opacity:0
+  }to{
+    opacity:1
   }
 }

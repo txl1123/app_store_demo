@@ -3,7 +3,7 @@ import qs from 'qs'
 
 // 配置请求基地址
 const service = axios.create({
-  baseURL: '/api/'
+  baseURL: '/'
 })
 
 // 添加请求拦截器

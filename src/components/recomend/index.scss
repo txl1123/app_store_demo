@@ -1,0 +1,59 @@
+$vm_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
+@function rem($px) {
+     @return ($px / $vm_fontsize ) * 1rem;
+}
+.recomend {
+  overflow: hidden;
+  margin-top: rem(50);
+  .r_title{
+    padding: rem(18) rem(17);
+    font-size: rem(22);
+    color: #222;
+  }
+}
+.recomend_list {
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: rem(13);
+  padding-bottom: rem(15);
+  border-bottom: rem(1) solid #dedede;
+  .recomend_wrap {
+    width: max-content;
+    height: rem(164);
+  }
+  .recomend_item {
+    padding-left: rem(17);
+    float: left;
+    width: rem(87);
+    &:last-child{
+      padding-right: rem(17);
+    }
+    .r_item_img {
+      width: rem(87);
+      height: rem(87);
+      border-radius: rem(18);
+      margin-bottom: rem(8);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #ddd;
+    }
+    .r_item_name {
+      font-size: rem(13);
+      color: #333;
+      width: rem(87);
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-wrap: break-word;
+    }
+    .r_item_category {
+      color: #666;
+    }
+  }
+}

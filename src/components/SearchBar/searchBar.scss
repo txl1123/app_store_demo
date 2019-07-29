@@ -1,0 +1,47 @@
+$vm_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
+@function rem($px) {
+     @return ($px / $vm_fontsize ) * 1rem;
+}
+.search_bar {
+  padding: rem(10) rem(17);
+  background: #F8F8F9;
+  border-bottom: rem(1) solid #dedede;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 10;
+  .s_wrap{
+    background: #E4E5E6;
+    border-radius: rem(8);
+    height: rem(30);
+    position: relative;
+    overflow: hidden;
+    .s_placeholder{
+      color: #999;
+      text-align: center;
+      font-size: rem(13);
+      line-height: rem(30);
+    }
+    .s_inpt {
+      color: #333;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      border: 0;
+      border-radius: rem(8); 
+      padding: 0 rem(15);
+      &:focus{
+        background: #E4E5E6;
+        border: 0;
+        outline: none;
+      }
+    }
+  }
+  
+}
